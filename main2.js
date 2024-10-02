@@ -8,13 +8,12 @@
 // because you can use another function to output what is needed 
 function isPrime(num) {
     if (num < 2) return false;
-    for (let i = 2; i < num; i++){
+    for (let i = 2; i <= Math.sqrt(num); i++){
         if (num%i === 0){
-            return false
-        } else {
-            return true
+            return false;
         }
     }
+    return true;
 }
 
 function nextPrime(num) {
@@ -27,7 +26,7 @@ function nextPrime(num) {
     }
 }
 
-console.log(nextPrime(21))
+console.log(nextPrime(26))
 
 
 
