@@ -8,6 +8,8 @@
 // because you can use another function to output what is needed 
 function isPrime(num) {
     if (num < 2) return false;
+    // What happens if i dont use Math.sqrt? Understand it fundamentally.
+    // Im adding to i to find if the num is divisible by another number.
     for (let i = 2; i <= Math.sqrt(num); i++){
         if (num%i === 0){
             return false;
@@ -18,7 +20,9 @@ function isPrime(num) {
 
 function nextPrime(num) {
     let next = num + 1;
+    // Why until true?
     while(true) {
+        // Practicing and understand how and when to do this.
         if (isPrime(next)) {
             return next;
         }
@@ -26,7 +30,7 @@ function nextPrime(num) {
     }
 }
 
-console.log(nextPrime(26))
+console.log(nextPrime(55))
 
 
 
